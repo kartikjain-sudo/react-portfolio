@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Loader from 'react-loaders';
 
 import './index.scss';
 import LogoTitle from '../../assets/images/logo.png'
-import { job_array, first_name_without_first_letter_array, what_you_do } from '../../configurable'
 import AnimatedLetters from '../AnimatedLetters';
-import Loader from 'react-loaders';
+import { job_array, first_name_without_first_letter_array, what_you_do, user } from '../../configurable'
+
 function Home() {
 
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -32,12 +33,12 @@ function Home() {
                 <span className={`${letterClass} _14`}>'m</span>
                 <img src={LogoTitle} alt='developer' />
                 <AnimatedLetters letterClass={letterClass}
-                strArray={first_name_without_first_letter_array} 
+                strArray={first_name_without_first_letter_array(user.name)} 
                 idx={15}/>
                 <br />
                 <AnimatedLetters letterClass={letterClass}
-                strArray={job_array} 
-                idx={15 + first_name_without_first_letter_array.length}/>
+                strArray={job_array[0]} 
+                idx={15 + first_name_without_first_letter_array(user.name).length}/>
             </h1>
             <h2>{what_you_do}</h2>
             <Link to='/contact' className='flat-button'> Contact Me </Link>

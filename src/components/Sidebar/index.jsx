@@ -6,8 +6,8 @@ import { faEthereum, faGithub, faInstagram, faLinkedin, faMedium, faTwitter } fr
 
 import './index.scss';
 import logos from '../../assets/images/logo.png';
+import { socialMedia } from '../../configurable';
 import logo_sub from '../../assets/images/logo_sub.png';
-import { linkedIn, github, medium, insta, twitter } from '../../configurable';
 
 function Sidebar() {
   return (
@@ -35,27 +35,27 @@ function Sidebar() {
         </nav>
         <ul>
           <li>
-            <a target='_blank' rel='noreferrer' href={linkedIn}>
+            <a target='_blank' rel='noreferrer' href={socialMedia.linkedIn}>
               <FontAwesomeIcon icon={faLinkedin} color='#4d4d4e' />
             </a>
           </li>
           <li>
-            <a target='_blank' rel='noreferrer' href={github}>
+            <a target='_blank' rel='noreferrer' href={socialMedia.github}>
               <FontAwesomeIcon icon={faGithub} color='#4d4d4e' />
             </a>
           </li>
           <li>
-            <a target='_blank' rel='noreferrer' href={medium}>
+            <a target='_blank' rel='noreferrer' href={socialMedia.medium}>
               <FontAwesomeIcon icon={faMedium} color='#4d4d4e' />
             </a>
           </li>
           <li>
-            <a target='_blank' rel='noreferrer' href={insta}>
+            <a target='_blank' rel='noreferrer' href={socialMedia.insta}>
               <FontAwesomeIcon icon={faInstagram} color='#4d4d4e' />
             </a>
           </li>
           <li>
-            <a target='_blank' rel='noreferrer' href={twitter}>
+            <a target='_blank' rel='noreferrer' href={socialMedia.twitter}>
               <FontAwesomeIcon icon={faTwitter} color='#4d4d4e' />
             </a>
           </li>
