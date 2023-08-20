@@ -82,7 +82,7 @@ function Contact() {
       <div className='info-map'>
         {user.name} <br />
         {user.address.country} <br />
-        <span>kartikjain42@protonmail.com </span>
+        <span>{user.email}</span>
       </div>
       <div className="map-wrap">
           <MapContainer center={[user.address.x_coordinates, user.address.y_coordinates]} zoom={13}>
