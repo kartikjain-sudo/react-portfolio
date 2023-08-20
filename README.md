@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:6001](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -69,3 +69,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+
+
+# TODO
+- [ ] update new loader
+- [ ] Add Image on the right for homepage
+- [ ] Animate blockchain developer with blockend developer (blockchain + backend)
+- [ ] add skillset
+- [ ] add portfolio
+- [ ] Improve alert box on Contact
+- [ ] disable send button in contact until we get an alert.
+- [ ] make website responsive
+- [ ] Interactive Background 
