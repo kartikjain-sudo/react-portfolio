@@ -1,9 +1,11 @@
 
-import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import React, { useEffect, useRef, useState } from 'react';
+import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
 
 import './index.scss';
 import Loader from 'react-loaders';
+import { user } from '../../configurable';
 import AnimatedLetters from '../AnimatedLetters';
 
 function Contact() {
@@ -78,10 +80,18 @@ function Contact() {
         </div>
       </div>
       <div className='info-map'>
-        Kartik Jain <br />
-        India <br />
+        {user.name} <br />
+        {user.address.country} <br />
         <span>kartikjain42@protonmail.com </span>
       </div>
+      <div className="map-wrap">
+          <MapContainer center={[user.address.x_coordinates, user.address.y_coordinates]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[user.address.x_coordinates, user.address.y_coordinates]}>
+              <Popup>{user.name} lives here, come over for a cup of coffee :)</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
     </div>
     <Loader type='pacman' />
     </>
