@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDocker, faEthereum, faGitAlt, faJs, faNodeJs, faRust } from '@fortawesome/free-brands-svg-icons';
+import { Loader } from 'react-loaders';
 
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDocker, faEthereum, faGitAlt, faJs, faNodeJs, faRust } from '@fortawesome/free-brands-svg-icons';
 
 function About() {
 
@@ -20,6 +21,7 @@ function About() {
   }, []);
 
   return (
+    <>
     <div className="container about-page">
       <div className="text-zone">
         <h1>
@@ -81,6 +83,8 @@ function About() {
         </div>
       </div>
     </div>
+    <Loader type='pacman' />
+    </>
   );
 }
 

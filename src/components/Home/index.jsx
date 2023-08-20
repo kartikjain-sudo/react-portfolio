@@ -5,15 +5,10 @@ import './index.scss';
 import LogoTitle from '../../assets/images/logo.png'
 import { job_array, first_name_without_first_letter_array, what_you_do } from '../../configurable'
 import AnimatedLetters from '../AnimatedLetters';
+import Loader from 'react-loaders';
 function Home() {
 
   const [letterClass, setLetterClass] = useState('text-animate')
-
-//   useEffect(() => {
-//     return setTimeout(() => {
-//         setLetterClass('text-animate-hover')
-//     }, 4000)
-//   }, [])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -26,6 +21,7 @@ function Home() {
   }, []);
 
   return (
+    <>
     <div className='container home-page'>
         <div className='text-zone'>
             <h1>
@@ -47,6 +43,8 @@ function Home() {
             <Link to='/contact' className='flat-button'> Contact Me </Link>
         </div>
     </div>
+    <Loader type='pacman' />
+    </>
   )
 }
 
