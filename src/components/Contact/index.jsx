@@ -11,6 +11,7 @@ import AnimatedLetters from '../AnimatedLetters';
 function Contact() {
 
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
   const refForm = useRef()
 
   useEffect(() => {
@@ -23,8 +24,10 @@ function Contact() {
     };
   }, []);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault()
+
+    setButtonDisabled(true);
 
     emailjs
       .sendForm(
@@ -37,6 +40,7 @@ function Contact() {
         window.location.reload(false)
       }, () => {
         alert("Failed to sent, Please Try Again.")
+        setButtonDisabled(false);
       })
   }
 
@@ -73,7 +77,7 @@ function Contact() {
                 <textarea placeholder='Message' name='message' required />
               </li>
               <li>
-                <input type='submit' className='flat-button' value='SEND' />
+                <input type='submit' className='flat-button' value='SEND' disabled={isButtonDisabled}  />
               </li>
             </ul>
           </form>

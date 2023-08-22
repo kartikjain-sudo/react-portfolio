@@ -77,7 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [ ] Animate blockchain developer with blockend developer (blockchain + backend)
 - [ ] add skillset
 - [ ] add portfolio
-- [ ] Improve alert box on Contact
-- [ ] disable send button in contact until we get an alert.
+- [ ] Improve toaster on Contact
+- [x] disable send button in contact until we get an alert.
 - [ ] make website responsive
 - [ ] Interactive Background 
